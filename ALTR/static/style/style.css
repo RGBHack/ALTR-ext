@@ -1,0 +1,15 @@
+html,
+body {
+    width: 600px;
+    height: 500px;
+}
+
+.logo-header {
+    width: 150px;
+    margin-left: 100px;
+}
+
+.header {
+    margin: 0 auto;
+    width: 350px;
+}
