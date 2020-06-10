@@ -17,9 +17,10 @@ function extractHostname(url) {
 }
 
 chrome.tabs.getSelected(null, function (tab) {
-    myFunction(tab.url);
+    myFunction(tab.url, tab.title);
 });
 
-function myFunction(tablink) {
-    document.getElementById("ctab").innerHTML = extractHostname(tablink);
+function myFunction(tablink, tabtitle) {
+    document.getElementById("curl").innerHTML = extractHostname(tablink);
+    document.getElementById("cname").innerHTML = extractHostname(tabtitle);
 }
