@@ -22,5 +22,6 @@ chrome.tabs.getSelected(null, function (tab) {
 
 function myFunction(tablink, tabtitle) {
     document.getElementById("curl").innerHTML = extractHostname(tablink);
+    document.getElementById("curl").href = tablink;
     document.getElementById("cname").innerHTML = extractHostname(tabtitle);
 }

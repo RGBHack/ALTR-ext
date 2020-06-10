@@ -13,11 +13,11 @@ hr {
     border-top: 3px solid rgba(85, 85, 85, 0.384);
 }
 
-#ctab {
-    text-decoration: underline;
+#curl {
+    text-decoration: underline !important;
 }
 
-#cnamep {
+.cnamep {
     color: #000;
 }
 
