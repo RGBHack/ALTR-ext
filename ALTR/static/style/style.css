@@ -51,7 +51,7 @@ hr {
 .btn-div {
   width: 70%;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .logout {
@@ -70,6 +70,24 @@ hr {
 .logout:hover {
   text-decoration: underline;
   box-shadow: 5px 5px 12px rgba(255, 0, 0, 0.6) !important;
+}
+
+.add-email {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  float: right;
+  color: white;
+  background-color: #0070f3;
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 5px 5px 12px rgb(0, 112, 243, 0.4) !important;
+}
+
+.add-email:hover {
+  text-decoration: underline;
+  box-shadow: 5px 5px 12px rgb(0, 112, 243, 0.6) !important;
 }
 
 .logo-header {
