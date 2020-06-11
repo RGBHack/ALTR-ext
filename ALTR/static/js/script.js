@@ -1,4 +1,5 @@
 document.getElementById("gen").addEventListener("click", gen);
+document.getElementById("dashboard_btn").addEventListener("click", dashboard)
 
 function extractHostname(url) {
     var hostname;
@@ -26,6 +27,10 @@ function myFunction(tablink, tabtitle) {
     document.getElementById("curl").innerHTML = extractHostname(tablink);
     document.getElementById("curl").href = tablink;
     document.getElementById("cname").innerHTML = extractHostname(tabtitle);
+}
+
+function dashboard() {
+    window.location.href = 'dashboard.html'
 }
 
 function gen() {
