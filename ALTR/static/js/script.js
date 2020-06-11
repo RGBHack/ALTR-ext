@@ -1,5 +1,5 @@
-document.getElementById("gen").addEventListener("click", gen);
-document.getElementById("dashboard_btn").addEventListener("click", dashboard)
+//document.getElementById("gen").addEventListener("click", gen);
+//document.getElementById("dashboard_btn").addEventListener("click", dashboard)
 
 function extractHostname(url) {
     var hostname;
@@ -24,9 +24,9 @@ chrome.tabs.getSelected(null, function (tab) {
 });
 
 function myFunction(tablink, tabtitle) {
-    document.getElementById("curl").innerHTML = extractHostname(tablink);
-    document.getElementById("curl").href = tablink;
-    document.getElementById("cname").innerHTML = extractHostname(tabtitle);
+    //document.getElementById("curl").innerHTML = extractHostname(tablink);
+    //document.getElementById("curl").href = tablink;
+    //document.getElementById("cname").innerHTML = extractHostname(tabtitle);
 }
 
 function dashboard() {
