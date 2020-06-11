@@ -5,7 +5,12 @@ body {
   width: 400px;
   height: 430px;
   text-align: center;
-  overflow: auto;
+  overflow: hidden;
+}
+
+#emails {
+    overflow: scroll !important;
+    height: 75%;
 }
 
 hr {
