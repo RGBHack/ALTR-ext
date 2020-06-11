@@ -5,6 +5,7 @@ body {
     width: 400px;
     height: 430px;
     text-align: center;
+    overflow: auto;
 }
 
 hr {
