@@ -33,8 +33,19 @@ hr {
   width: 70%;
   font-family: "Nunito";
   font-weight: 700;
-  font-size: 20px;
+  font-size: 15px;
   text-align: left !important;
+}
+
+.email svg {
+    float: right;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.email svg:hover {
+    float: right;
+    background-color: red;
 }
 
 .logo-header {
