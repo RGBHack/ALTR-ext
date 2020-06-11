@@ -2,60 +2,80 @@
 
 html,
 body {
-    width: 400px;
-    height: 430px;
-    text-align: center;
-    overflow: auto;
+  width: 400px;
+  height: 430px;
+  text-align: center;
+  overflow: auto;
 }
 
 hr {
-    width: 85%;
-    margin: 10px auto;
-    border-top: 3px solid rgba(85, 85, 85, 0.384);
+  width: 85%;
+  margin: 10px auto;
+  border-top: 3px solid rgba(85, 85, 85, 0.384);
 }
 
 #curl {
-    text-decoration: underline !important;
+  text-decoration: underline !important;
 }
 
 .cnamep {
-    color: #000;
+  color: #000;
 }
 
 .email {
-    display: block !important;
-    color: white !important;
-    background-color: #0070f3;
-    box-shadow: 5px 5px 12px rgb(0, 112, 243, 0.6) !important;
-    padding: 20px 20px;
-    margin: 25px auto;
-    border-radius: 10px;
-    width: 70%;
-    font-family: "Nunito";
-    font-weight: 700;
-    font-size: 20px;
+  display: block !important;
+  color: white !important;
+  background-color: #0070f3;
+  box-shadow: 5px 5px 12px rgb(0, 112, 243, 0.6) !important;
+  padding: 20px 20px;
+  margin: 25px auto;
+  border-radius: 10px;
+  width: 70%;
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .logo-header {
-    margin-top: 10px;
-    width: 200px;
+  margin-top: 10px;
+  width: 200px;
 }
 
 .header {
-    margin: 0 auto;
-    width: 200px;
+  margin: 0 auto;
+  width: 200px;
 }
 
 .btn-primary {
-    display: block !important;
-    color: white;
-    background-color: #0070f3;
-    box-shadow: 5px 5px 12px rgb(0, 112, 243, 0.6) !important;
-    padding: 20px 20px;
-    margin: 25px auto;
-    border-radius: 10px;
-    width: 70%;
-    font-family: "Nunito";
-    font-weight: 700;
-    font-size: 20px;
+  display: block !important;
+  color: white;
+  background-color: #0070f3;
+  box-shadow: 5px 5px 12px rgb(0, 112, 243, 0.6) !important;
+  padding: 20px 20px;
+  margin: 25px auto;
+  border-radius: 10px;
+  width: 70%;
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #bebebe;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #999999;
 }
