@@ -1,3 +1,5 @@
+document.getElementById("gen").addEventListener("click", gen);
+
 function extractHostname(url) {
     var hostname;
     //find & remove protocol (http, ftp, etc.) and get hostname
@@ -24,4 +26,28 @@ function myFunction(tablink, tabtitle) {
     document.getElementById("curl").innerHTML = extractHostname(tablink);
     document.getElementById("curl").href = tablink;
     document.getElementById("cname").innerHTML = extractHostname(tabtitle);
+}
+
+function gen() {
+    // document.getElementById("cname").innerHTML = "hi";
+    jQuery.ajax({
+        url: "http://altr.cf/emails",
+        type: "POST",
+        data: JSON.stringify({
+            username: "rohan",
+            email: "sadfasdfsafd",
+            youremail: "rohanj2006@gmail.com",
+            uid: "very_good_uid",
+        }),
+        contentType: "application/json",
+        beforeSend: function (x) {
+            if (x && x.overrideMimeType) {
+                x.overrideMimeType("application/json;charset=UTF-8");
+            }
+        },
+        success: function (result) {
+            document.getElementById("email").innerHTML =
+                "Email: " + result.emails;
+        },
+    });
 }
