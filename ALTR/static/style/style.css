@@ -138,3 +138,7 @@ hr {
 ::-webkit-scrollbar-thumb:hover {
   background: #999999;
 }
+
+button:focus {
+    outline: none;
+}
