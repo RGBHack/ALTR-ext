@@ -73,7 +73,7 @@ hr {
 }
 
 .logout:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   box-shadow: 5px 5px 12px rgba(255, 0, 0, 0.6) !important;
 }
 
@@ -91,7 +91,7 @@ hr {
 }
 
 .add-email:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   box-shadow: 5px 5px 12px rgb(0, 112, 243, 0.6) !important;
 }
 
