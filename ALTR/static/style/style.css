@@ -70,11 +70,14 @@ hr {
   font-weight: 700;
   font-size: 15px;
   box-shadow: 5px 5px 12px rgba(255, 0, 0, 0.4) !important;
+  transition: all 0.2s smooth;
 }
 
 .logout:hover {
   /* text-decoration: underline; */
   box-shadow: 5px 5px 12px rgba(255, 0, 0, 0.6) !important;
+  font-size: 17px;
+  padding: 8.5px 16px;
 }
 
 .add-email {
@@ -88,11 +91,14 @@ hr {
   font-weight: 700;
   font-size: 15px;
   box-shadow: 5px 5px 12px rgb(0, 112, 243, 0.4) !important;
+  transition: all 0.2s smooth;
 }
 
 .add-email:hover {
   /* text-decoration: underline; */
   box-shadow: 5px 5px 12px rgb(0, 112, 243, 0.6) !important;
+  font-size: 17px;
+  padding: 8.5px 15px;
 }
 
 .logo-header {
