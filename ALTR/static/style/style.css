@@ -53,6 +53,14 @@ hr {
   background-color: red;
 }
 
+.email a {
+    color: white !important;
+}
+
+.email a:hover {
+    text-decoration: none !important;
+}
+
 .btn-div {
   width: 70%;
   margin: 0 auto;
