@@ -9,8 +9,8 @@ body {
 }
 
 #emails {
-    overflow: scroll !important;
-    height: 75%;
+  overflow: auto !important;
+  height: 60%;
 }
 
 hr {
@@ -54,11 +54,11 @@ hr {
 }
 
 .email a {
-    color: white !important;
+  color: white !important;
 }
 
 .email a:hover {
-    text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 .btn-div {
@@ -78,11 +78,10 @@ hr {
   font-weight: 700;
   font-size: 15px;
   box-shadow: 5px 5px 12px rgba(255, 0, 0, 0.4) !important;
-  transition: all 0.2s smooth;
+  transition: all 0.2s;
 }
 
 .logout:hover {
-  /* text-decoration: underline; */
   box-shadow: 5px 5px 12px rgba(255, 0, 0, 0.6) !important;
   font-size: 17px;
   padding: 8.5px 16px;
@@ -99,14 +98,36 @@ hr {
   font-weight: 700;
   font-size: 15px;
   box-shadow: 5px 5px 12px rgb(0, 112, 243, 0.4) !important;
-  transition: all 0.2s smooth;
+  transition: all 0.2s;
 }
 
 .add-email:hover {
-  /* text-decoration: underline; */
   box-shadow: 5px 5px 12px rgb(0, 112, 243, 0.6) !important;
   font-size: 17px;
-  padding: 8.5px 15px;
+  padding: 8.5px 16px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  float: center;
+  color: white;
+  background-color: #0070f3;
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 20px;
+  box-shadow: 5px 5px 12px rgb(0, 112, 243, 0.4) !important;
+  transition: all 0.2s;
+}
+
+.login-input {
+  text-align: center;
+}
+
+.login-btn:hover {
+  box-shadow: 5px 5px 12px rgb(0, 112, 243, 0.6) !important;
 }
 
 .logo-header {
@@ -116,7 +137,6 @@ hr {
 
 .header {
   margin: 0 auto;
-  width: 200px;
 }
 
 .btn-primary {
@@ -154,5 +174,9 @@ hr {
 }
 
 button:focus {
-    outline: none;
+  outline: none;
+}
+
+.btn-div > * {
+  transition: all 0.2s;
 }

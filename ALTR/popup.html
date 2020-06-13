@@ -27,11 +27,27 @@
     </svg>
     <div class="header">
         <img class="logo-header" src="static/img/logo.svg" />
+        <hr />
     </div>
-    <!--<pr class="cnamep">Site Url: <a id="curl" class="name"></a></pr><br />
-    <pr class="cnamep">Site Name: <a id="cname" class="name"></a></pr>-->
-    <hr />
     <div style="margin-top: 30px; text-align: center;" id="emails">
+        <pr class="cnamep email">
+            <a id="email" class="name" href="#">example@example.com</a>
+            <a title="Remove Email">
+                <svg class="icon" height="20" width="20">
+                    <use xlink:href="#cross"></use>
+                </svg>
+            </a>
+        </pr>
+
+        <pr class="cnamep email">
+            <a id="email" class="name" href="#">example@example.com</a>
+            <a title="Remove Email">
+                <svg class="icon" height="20" width="20">
+                    <use xlink:href="#cross"></use>
+                </svg>
+            </a>
+        </pr>
+
         <pr class="cnamep email">
             <a id="email" class="name" href="#">example@example.com</a>
             <a title="Remove Email">
@@ -80,11 +96,13 @@
             <button class="logout">Log Out</button>
             <button class="add-email">Add Email</button>
         </div>
+
+        <footer>
+            Copyright 2020 RGBHack
+        </footer>
     </div>
 
-    <footer>
-        Copyright 2020 RGBHack
-    </footer>
+
     <script>
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
