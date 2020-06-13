@@ -31,6 +31,7 @@ function myFunction(tablink, tabtitle) {
 
 function dashboard() {
     window.location.href = 'dashboard.html'
+    chrome.browserAction.setPopup({popup: "dashboard.html"});
 }
 
 function gen() {
