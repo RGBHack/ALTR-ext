@@ -70,4 +70,12 @@ firebase.auth().onAuthStateChanged(function (user) {
     if (user !== null) {
         console.log(user)
     }
+    else {
+        window.location.href = 'login.html'
+        chrome.browserAction.setPopup({popup: "login.html"});
+    }
 })
+
+document.getElementById("logout-btn").onclick = () => {
+    firebase.auth().signOut()
+}
