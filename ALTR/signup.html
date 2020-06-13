@@ -14,7 +14,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="static/style/style.css" />
+    <link rel="stylesheet" href="static/style/lands.css" />
 </head>
 
 <body>
@@ -28,63 +28,27 @@
     <div class="header">
         <img class="logo-header" src="static/img/logo.svg" />
     </div>
-    <!--<pr class="cnamep">Site Url: <a id="curl" class="name"></a></pr><br />
-    <pr class="cnamep">Site Name: <a id="cname" class="name"></a></pr>-->
     <hr />
     <div style="margin-top: 30px; text-align: center;" id="emails">
-        <pr class="cnamep email">
-            <a id="email" class="name" href="#">example@example.com</a>
-            <a title="Remove Email">
-                <svg class="icon" height="20" width="20">
-                    <use xlink:href="#cross"></use>
-                </svg>
-            </a>
-        </pr>
-
-        <pr class="cnamep email">
-            <a id="email" class="name" href="#">example@example.com</a>
-            <a title="Remove Email">
-                <svg class="icon" height="20" width="20">
-                    <use xlink:href="#cross"></use>
-                </svg>
-            </a>
-        </pr>
-
-        <pr class="cnamep email">
-            <a id="email" class="name" href="#">example@example.com</a>
-            <a title="Remove Email">
-                <svg class="icon" height="20" width="20">
-                    <use xlink:href="#cross"></use>
-                </svg>
-            </a>
-        </pr>
-
-        <pr class="cnamep email">
-            <a id="email" class="name" href="#">example@example.com</a>
-            <a title="Remove Email">
-                <svg class="icon" height="20" width="20">
-                    <use xlink:href="#cross"></use>
-                </svg>
-            </a>
-        </pr>
-
-        <pr class="cnamep email">
-            <a id="email" class="name" href="#">example@example.com</a>
-            <a title="Remove Email">
-                <svg class="icon" height="20" width="20">
-                    <use xlink:href="#cross"></use>
-                </svg>
-            </a>
-        </pr>
         <div class="btn-div">
-            <button class="logout">Log Out</button>
-            <button class="add-email">Add Email</button>
+            <form>
+                <div class="form-group">
+                    <input class="login-input form-control" type="text" id="fname" name="fname"
+                        placeholder="Username"><br>
+                    <input class="login-input form-control" type="password" id="lname" name="lname"
+                        placeholder="Password"><br>
+                    <input class="form-control login-btn" type="submit" value="Sign Up">
+                </div>
+            </form>
+
+            <a href="./login.html"><span class="change-btn">Log In</span></a>
+
+            <footer style="margin-top: 10px;">
+                Copyright 2020 RGBHack
+            </footer>
         </div>
     </div>
 
-    <footer>
-        Copyright 2020 RGBHack
-    </footer>
     <script>
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
@@ -94,4 +58,3 @@
 <script src="static/js/script.js"></script>
 
 </html>
-
