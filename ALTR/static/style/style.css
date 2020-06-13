@@ -78,7 +78,7 @@ hr {
   font-weight: 700;
   font-size: 15px;
   box-shadow: 5px 5px 12px rgba(255, 0, 0, 0.4) !important;
-  transition: all 0.2s;
+  transition: all none !important;
 }
 
 .logout:hover {
@@ -98,13 +98,13 @@ hr {
   font-weight: 700;
   font-size: 15px;
   box-shadow: 5px 5px 12px rgb(0, 112, 243, 0.4) !important;
-  transition: all 0.2s;
+  transition: all none !important;
 }
 
 .add-email:hover {
   box-shadow: 5px 5px 12px rgb(0, 112, 243, 0.6) !important;
   font-size: 17px;
-  padding: 8.5px 16px;
+  padding: 8.5px 15px;
 }
 
 .login-btn {
@@ -175,8 +175,4 @@ hr {
 
 button:focus {
   outline: none;
-}
-
-.btn-div > * {
-  transition: all 0.2s;
 }
