@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Nunito:wght@400;700&display=swap");
+
+html,
+body {
+  width: 400px;
+  height: 430px;
+  text-align: center;
+  overflow: hidden;
+}
+
+#emails {
+  height: 75%;
+}
+
+hr {
+  width: 85%;
+  margin: 10px auto;
+  border-top: 3px solid rgba(85, 85, 85, 0.384);
+}
+
+#curl {
+  text-decoration: underline !important;
+}
+
+.cnamep {
+  color: #000;
+}
+
+.email {
+  display: block !important;
+  color: white !important;
+  background-color: #0070f3;
+  box-shadow: 5px 5px 12px rgb(0, 112, 243, 0.6) !important;
+  padding: 20px 20px;
+  margin: 25px auto;
+  border-radius: 10px;
+  width: 70%;
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 15px;
+  text-align: left !important;
+}
+
+.email svg {
+  float: right;
+  padding: 5px;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+
+.email svg:hover {
+  float: right;
+  background-color: red;
+}
+
+.email a {
+  color: white !important;
+}
+
+.email a:hover {
+  text-decoration: none !important;
+}
+
+.btn-div {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.logout {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  float: left;
+  color: white;
+  background-color: red;
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 5px 5px 12px rgba(255, 0, 0, 0.4) !important;
+  transition: all 0.2s;
+}
+
+.logout:hover {
+  /* text-decoration: underline; */
+  box-shadow: 5px 5px 12px rgba(255, 0, 0, 0.6) !important;
+  font-size: 17px;
+}
+
+.add-email {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  float: right;
+  color: white;
+  background-color: #0070f3;
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 5px 5px 12px rgb(0, 112, 243, 0.4) !important;
+  transition: all 0.2s;
+}
+
+.add-email:hover {
+  /* text-decoration: underline; */
+  box-shadow: 5px 5px 12px rgb(0, 112, 243, 0.6) !important;
+  font-size: 17px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  float: center;
+  color: white;
+  background-color: #0070f3;
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 20px;
+  box-shadow: 5px 5px 12px rgb(0, 112, 243, 0.4) !important;
+  transition: all 0.2s;
+}
+
+.login-input {
+  text-align: center;
+}
+
+.login-btn:hover {
+  box-shadow: 5px 5px 12px rgb(0, 112, 243, 0.6) !important;
+}
+
+.change-btn {
+  margin-top: 50px;
+  color: #0070f3;
+}
+
+.change-btn:hover {
+  text-decoration: underline;
+}
+
+.logo-header {
+  margin-top: 10px;
+  width: 200px;
+}
+
+.header {
+  margin: 0 auto;
+  width: 200px;
+}
+
+.btn-primary {
+  display: block !important;
+  color: white;
+  background-color: #0070f3;
+  box-shadow: 5px 5px 12px rgb(0, 112, 243, 0.6) !important;
+  padding: 20px 20px;
+  margin: 25px auto;
+  border-radius: 10px;
+  width: 70%;
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #bebebe;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #999999;
+}
+
+button:focus {
+  outline: none;
+}
+
+.btn-div>* {
+  transition: all 0.2s;
+}
