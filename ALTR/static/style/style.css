@@ -10,7 +10,11 @@ body {
 
 #emails {
   overflow: auto !important;
-  height: 60%;
+  height: 69%;
+}
+
+footer {
+  margin-bottom: 20px;
 }
 
 hr {
