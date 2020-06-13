@@ -4,9 +4,9 @@
     "description": "An easy-to-use extension for taking control of your email spam with aliases",
     "permissions": ["tabs", "http://altr.cf/"],
     "browser_action": {
-        "default_popup": "popup.html",
+        "default_popup": "login.html",
         "default_icon": "icon.png"
     },
-    "content_security_policy": "script-src 'self' https://code.jquery.com; object-src 'self'",
+    "content_security_policy": "script-src 'self' https://code.jquery.com https://www.gstatic.com; object-src 'self'",
     "manifest_version": 2
 }

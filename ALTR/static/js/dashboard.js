@@ -57,3 +57,17 @@ function gen() {
         },
     });
 }
+
+
+var config = {
+    apiKey: "AIzaSyCc2eM-c8MZRFe5z8quDuvg_3Sz1IPUAxs",
+}
+if (firebase.apps.length === 0) {
+    firebase.initializeApp(config)
+}
+
+firebase.auth().onAuthStateChanged(function (user) {
+    if (user !== null) {
+        console.log(user)
+    }
+})

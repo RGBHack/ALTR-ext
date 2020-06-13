@@ -31,11 +31,11 @@
     <hr />
     <div style="margin-top: 30px; text-align: center;" id="emails">
         <div class="btn-div">
-            <form>
+            <form id="form">
                 <div class="form-group">
-                    <input class="login-input form-control" type="text" id="fname" name="fname"
-                        placeholder="Username"><br>
-                    <input class="login-input form-control" type="password" id="lname" name="lname"
+                    <input class="login-input form-control" type="text" id="email" name="email"
+                        placeholder="Email"><br>
+                    <input class="login-input form-control" type="password" id="password" name="password"
                         placeholder="Password"><br>
                     <input class="form-control login-btn" type="submit" value="Sign Up">
                 </div>
@@ -55,6 +55,10 @@
         });
     </script>
 </body>
+
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+
 <script src="static/js/signup.js"></script>
 
 </html>
