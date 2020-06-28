@@ -1,8 +1,20 @@
 var uid;
 var email;
+var tabname;
+
+chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+    var tab = tabs[0];
+    var url = new URL(tab.url)
+    var arr = url.hostname.split('.')
+    if (arr.length >= 2) tabname = arr[arr.length - 2]
+    else tabname = arr[0]
+    document.getElementById("name-input").value = tabname
+})
+
 var config = {
     apiKey: "AIzaSyCc2eM-c8MZRFe5z8quDuvg_3Sz1IPUAxs",
 }
+
 if (firebase.apps.length === 0) {
     firebase.initializeApp(config)
 }
@@ -22,8 +34,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 document.getElementById("logout-btn").onclick = () => {
     firebase.auth().signOut()
 }
-
-
 
 createEmail = (name) => {
     if (uid === undefined || email === undefined) return;
@@ -53,15 +63,15 @@ createEmail = (name) => {
     })
 }
 
-onEmail = (name) => {
+onEmail = (alias) => {
     if (uid === undefined || email === undefined) return;
     jQuery.ajax({
         url: 'http://altr.cf/on',
         type: 'POST',
         data: JSON.stringify({
             youremail: email,
-            email: uid,
-            uid: name
+            email: alias,
+            uid: uid
         }),
         contentType: 'application/json',
         beforeSend: function(x) {
@@ -72,8 +82,7 @@ onEmail = (name) => {
         success: function(result) {
             var res = result.res;
             if (res === 0) {
-                var email = result.email
-                    //create an emlement for that email
+                // doSomething
             } else {
                 console.log(res);
             }
@@ -81,15 +90,15 @@ onEmail = (name) => {
     })
 }
 
-offEmail = (name) => {
+offEmail = (alias) => {
     if (uid === undefined || email === undefined) return;
     jQuery.ajax({
-        url: 'http://altr.cf/create',
+        url: 'http://altr.cf/off',
         type: 'POST',
         data: JSON.stringify({
-            uid: uid,
             youremail: email,
-            name: name
+            email: alias,
+            uid: uid
         }),
         contentType: 'application/json',
         beforeSend: function(x) {
@@ -100,8 +109,7 @@ offEmail = (name) => {
         success: function(result) {
             var res = result.res;
             if (res === 0) {
-                var email = result.email
-                    //create an emlement for that email
+                // doSomething
             } else {
                 console.log(res);
             }
@@ -109,15 +117,15 @@ offEmail = (name) => {
     })
 }
 
-status = (name) => {
+status = (alias) => {
     if (uid === undefined || email === undefined) return;
     jQuery.ajax({
-        url: 'http://altr.cf/create',
+        url: 'http://altr.cf/status',
         type: 'POST',
         data: JSON.stringify({
-            uid: uid,
             youremail: email,
-            name: name
+            email: alias,
+            uid: uid
         }),
         contentType: 'application/json',
         beforeSend: function(x) {
@@ -128,8 +136,7 @@ status = (name) => {
         success: function(result) {
             var res = result.res;
             if (res === 0) {
-                var email = result.email
-                    //create an emlement for that email
+                // doSomething
             } else {
                 console.log(res);
             }
@@ -137,15 +144,14 @@ status = (name) => {
     })
 }
 
-allAliases = (name) => {
+allAliases = () => {
     if (uid === undefined || email === undefined) return;
     jQuery.ajax({
-        url: 'http://altr.cf/create',
+        url: 'http://altr.cf/emails',
         type: 'POST',
         data: JSON.stringify({
-            uid: uid,
             youremail: email,
-            name: name
+            uid: uid,
         }),
         contentType: 'application/json',
         beforeSend: function(x) {
@@ -157,7 +163,6 @@ allAliases = (name) => {
             var res = result.res;
             if (res === 0) {
                 var email = result.email
-                    //create an emlement for that email
             } else {
                 console.log(res);
             }
@@ -165,15 +170,14 @@ allAliases = (name) => {
     })
 }
 
-deleteAlias = (name) => {
+deleteAlias = (email) => {
     if (uid === undefined || email === undefined) return;
     jQuery.ajax({
         url: 'http://altr.cf/create',
         type: 'POST',
         data: JSON.stringify({
+            email: email,
             uid: uid,
-            youremail: email,
-            name: name
         }),
         contentType: 'application/json',
         beforeSend: function(x) {
@@ -185,10 +189,21 @@ deleteAlias = (name) => {
             var res = result.res;
             if (res === 0) {
                 var email = result.email
-                    //create an emlement for that email
             } else {
                 console.log(res);
             }
         },
     })
+}
+
+document.getElementById("myInput").onclick = (e) => {
+    /*$('#myModal').on('shown.bs.modal', function() {
+        $('#myInput').trigger('focus')
+    })*/
+    console.log("modal")
+    $("#exampleModal").modal()
+}
+
+document.getElementById("close2").onclick = (e) => {
+    $("#exampleModal").modal('hide')
 }
