@@ -62,6 +62,7 @@ hr {
 
 .email z:hover {
     cursor: pointer;
+    text-decoration: line-through;
     font-size: 16px;
 }
 

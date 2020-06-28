@@ -102,8 +102,10 @@ createEmail = (name) => {
                 var email = result.email
                 console.log(email)
                 renderElement(email)
+            } else if (res === 5000) {
+                console.log("Alias Limit Reached For User (5)");
             } else {
-                console.log(res);
+                console.log("An Error Occured During the Transaction")
             }
         },
     })
@@ -130,7 +132,7 @@ onEmail = (alias) => {
             if (res === 0) {
                 // doSomething
             } else {
-                console.log(res);
+                console.log("An Error Occured During the Transaction")
             }
         },
     })
@@ -157,34 +159,7 @@ offEmail = (alias) => {
             if (res === 0) {
                 // doSomething
             } else {
-                console.log(res);
-            }
-        },
-    })
-}
-
-status = (alias) => {
-    if (uid === undefined || email === undefined) return;
-    jQuery.ajax({
-        url: 'http://altr.cf/status',
-        type: 'POST',
-        data: JSON.stringify({
-            youremail: email,
-            email: alias,
-            uid: uid
-        }),
-        contentType: 'application/json',
-        beforeSend: function(x) {
-            if (x && x.overrideMimeType) {
-                x.overrideMimeType('application/json;charset=UTF-8')
-            }
-        },
-        success: function(result) {
-            var res = result.res;
-            if (res === 0) {
-                // doSomething
-            } else {
-                console.log(res);
+                console.log("An Error Occured During the Transaction")
             }
         },
     })
@@ -215,7 +190,7 @@ allAliases = () => {
                     }
                 }
             } else {
-                alert("error")
+                console.log("An Error Occured During the Transaction")
             }
         },
     })
@@ -241,16 +216,13 @@ deleteAlias = (email) => {
             if (res === 0) {
                 var email = result.email
             } else {
-                console.log(res);
+                console.log("An Error Occured During the Transaction")
             }
         },
     })
 }
 
 document.getElementById("myInput").onclick = (e) => {
-    /*$('#myModal').on('shown.bs.modal', function() {
-        $('#myInput').trigger('focus')
-    })*/
     console.log("modal")
     $("#exampleModal").modal()
 }
