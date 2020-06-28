@@ -46,9 +46,19 @@ renderElement = (alias) => {
     console.log("rendering element")
     var pr = document.createElement("pr");
     pr.classList = "cnamep email"
-    pr.innerHTML = `<a id='${alias}' class='name' href='#'>${alias}</a><a title='Remove Email'><svg class='icon' height='20' width='20' id='${alias}_click'><use xlink:href='#cross'></use></svg></a>`
+    pr.id = alias + "_toplevel"
+    pr.innerHTML = `<a id='${alias}_toggler' class='name' href='#'>${alias}</a><a title='Remove Email'><svg class='icon' height='20' width='20' id='${alias}_click'><use xlink:href='#cross'></use></svg></a>`
     document.getElementById("actual_emails").appendChild(pr)
+    document.getElementById(alias+"_click").onclick = (e) => {
+        var elem = e.target;
+        while (elem.nodeName !== "PR") {
+            elem = elem.parentElement
+        }
+        console.log(elem)
+    }
 }
+
+renderElement("rohanj2006@gmail.com")
 
 createEmail = (name) => {
     if (uid === undefined || email === undefined) return;
@@ -71,6 +81,7 @@ createEmail = (name) => {
             if (res === 0) {
                 var email = result.email
                 console.log(email)
+                renderElement(email)
             } else {
                 console.log(res);
             }
