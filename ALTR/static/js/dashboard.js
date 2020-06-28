@@ -22,7 +22,7 @@ if (firebase.apps.length === 0) {
 document.getElementById("form").onsubmit = (e) => {
     e.preventDefault()
     $("#exampleModal").modal("hide")
-    createEmail(document.getElementById("name-input").value)    
+    createEmail(document.getElementById("name-input").value)
 }
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -30,7 +30,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         email = user.email
         uid = user.uid
         console.log(email + " " + uid)
-            //send post request to emails and initialize all the emails
+        allAliases()
     } else {
         window.location.href = 'login.html'
         chrome.browserAction.setPopup({ popup: "login.html" });
@@ -42,23 +42,43 @@ document.getElementById("logout-btn").onclick = () => {
 }
 
 
-renderElement = (alias) => {
+renderElement = (alias, state) => {
     console.log("rendering element")
     var pr = document.createElement("pr");
     pr.classList = "cnamep email"
     pr.id = alias + "_toplevel"
-    pr.innerHTML = `<a id='${alias}_toggler' class='name' href='#'>${alias}</a><a title='Remove Email'><svg class='icon' height='20' width='20' id='${alias}_click'><use xlink:href='#cross'></use></svg></a>`
+    if (state === "on") {
+        pr.innerHTML = `<z id='${alias}_toggler' class='name' href='#'>${alias}</z><z title='Remove Email'><svg class='icon' height='20' width='20' id='${alias}_click'><use xlink:href='#cross'></use></svg></z>`
+    } else {
+        pr.innerHTML = `<z id='${alias}_toggler' style='text-decoration: line-through;' class='name' href='#'>${alias}</z><z title='Remove Email'><svg class='icon' height='20' width='20' id='${alias}_click'><use xlink:href='#cross'></use></svg></z>`
+    }
     document.getElementById("actual_emails").appendChild(pr)
-    document.getElementById(alias+"_click").onclick = (e) => {
+    document.getElementById(alias + "_click").onclick = (e) => {
         var elem = e.target;
         while (elem.nodeName !== "PR") {
             elem = elem.parentElement
         }
-        console.log(elem)
+        console.log(elem.id.split("_toplevel")[0] + " delete")
+        deleteAlias(elem.id.split("_toplevel")[0])
+        elem.parentNode.removeChild(elem);
+    }
+    document.getElementById(alias + "_toggler").onclick = (e) => {
+        var elem = e.target;
+        while (elem.nodeName !== "PR") {
+            elem = elem.parentElement
+        }
+        console.log(elem.id.split("_toplevel")[0] + " toggle")
+        if (e.target.style["text-decoration"] != "line-through") {
+            e.target.style["text-decoration"] = "line-through";
+            offEmail(elem.id.split("_toplevel")[0])
+        } else {
+            e.target.style["text-decoration"] = "none";
+            onEmail(elem.id.split("_toplevel")[0])
+        }
+
+        //toggle state
     }
 }
-
-renderElement("rohanj2006@gmail.com")
 
 createEmail = (name) => {
     if (uid === undefined || email === undefined) return;
@@ -188,9 +208,14 @@ allAliases = () => {
         success: function(result) {
             var res = result.res;
             if (res === 0) {
-                var email = result.email
+                console.log(result.emails)
+                for (var i in result.emails) {
+                    for (var j in result.emails[i]) {
+                        renderElement(j, result.emails[i][j])
+                    }
+                }
             } else {
-                console.log(res);
+                alert("error")
             }
         },
     })

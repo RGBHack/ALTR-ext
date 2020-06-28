@@ -56,12 +56,13 @@ hr {
     background-color: red;
 }
 
-.email a {
+.email z {
     color: white !important;
 }
 
-.email a:hover {
-    text-decoration: none !important;
+.email z:hover {
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .btn-div {
@@ -122,7 +123,7 @@ hr {
     font-weight: 700;
     font-size: 20px;
     box-shadow: 5px 5px 12px rgb(0, 112, 243, 0.4) !important;
-    transition: all 0.2s;
+    transition: all 0.2s !important;
 }
 
 .login-input {
