@@ -224,7 +224,7 @@ allAliases = () => {
 deleteAlias = (email) => {
     if (uid === undefined || email === undefined) return;
     jQuery.ajax({
-        url: 'http://altr.cf/create',
+        url: 'http://altr.cf/delete',
         type: 'POST',
         data: JSON.stringify({
             email: email,
