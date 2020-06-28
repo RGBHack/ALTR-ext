@@ -19,6 +19,12 @@ if (firebase.apps.length === 0) {
     firebase.initializeApp(config)
 }
 
+document.getElementById("form").onsubmit = (e) => {
+    e.preventDefault()
+    $("#exampleModal").modal("hide")
+    createEmail(document.getElementById("name-input").value)    
+}
+
 firebase.auth().onAuthStateChanged(function(user) {
     if (user !== null) {
         email = user.email
@@ -33,6 +39,15 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 document.getElementById("logout-btn").onclick = () => {
     firebase.auth().signOut()
+}
+
+
+renderElement = (alias) => {
+    console.log("rendering element")
+    var pr = document.createElement("pr");
+    pr.classList = "cnamep email"
+    pr.innerHTML = `<a id='${alias}' class='name' href='#'>${alias}</a><a title='Remove Email'><svg class='icon' height='20' width='20' id='${alias}_click'><use xlink:href='#cross'></use></svg></a>`
+    document.getElementById("actual_emails").appendChild(pr)
 }
 
 createEmail = (name) => {
