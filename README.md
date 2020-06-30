@@ -21,9 +21,12 @@
 
 ## ✨ In Action
 
-<p align="center">
-  <!-- Screenshots, screencasts -->
-</p>
+<img src="./assets/altr_screenshot.png" />
+
+
+## 🎥 Video
+
+[https://youtu.be/hF3Hy5KhoyQ](https://youtu.be/hF3Hy5KhoyQ)
 
 ## 🔮 Usage
 
@@ -39,7 +42,7 @@
 
 ## 🤝 Contributing
 
-Contributions, PRs, issues and feature requests are welcome! Feel free to check out our [issues page](https://github.com/idk/issues).
+Contributions, PRs, issues and feature requests are welcome! Feel free to check out our [issues page](https://github.com/RGBHack/ALTR-ext/issues).
 
 ## ❤️ Show your support
 
