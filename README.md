@@ -22,7 +22,7 @@
 ## ✨ In Action
 
 <p align="center">
-  <!-- Screenshots, screencasts -->
+  <img src="./assets/altr_screenshot.png" />
 </p>
 
 ## 🔮 Usage
