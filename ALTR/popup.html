@@ -1,69 +1,99 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>ALTR</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-    </script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="static/style/style.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <svg width="0" height="0" class="hidden">
-        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224.512 224.512" id="cross">
-            <path fill="white"
-                d="M224.507 6.997L217.521 0 112.256 105.258 6.998 0 .005 6.997l105.258 105.257L.005 217.512l6.993 7L112.256 119.24l105.265 105.272 6.986-7-105.258-105.258z">
-            </path>
-        </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 224.512 224.512"
+        id="cross"
+      >
+        <path
+          fill="white"
+          d="M224.507 6.997L217.521 0 112.256 105.258 6.998 0 .005 6.997l105.258 105.257L.005 217.512l6.993 7L112.256 119.24l105.265 105.272 6.986-7-105.258-105.258z"
+        ></path>
+      </symbol>
     </svg>
     <div class="header">
-        <img class="logo-header" src="static/img/logo.svg" />
-        <hr />
+      <img class="logo-header" src="static/img/logo.svg" />
+      <hr />
     </div>
     <div style="margin-top: 30px; text-align: center;" id="emails">
-        <div id="actual_emails">
+      <div id="actual_emails"></div>
 
-        </div>
+      <div class="btn-div">
+        <button class="logout" id="logout-btn">Log Out</button>
+        <button class="add-email" id="myInput">Add Email</button>
+      </div>
 
-        <div class="btn-div">
-            <button class="logout" id="logout-btn">Log Out</button>
-            <button class="add-email" id="myInput">Add Email</button>
-        </div>
-
-        <footer>
-            Copyright 2020 RGBHack
-        </footer>
+      <footer>
+        Copyright 2020 RGBHack
+      </footer>
     </div>
-    <div class=" modal " tabindex="-1 " role="dialog " id="exampleModal">
-        <div class="modal-dialog-centered " role="document ">
-            <div class="modal-content ">
-                <div class="modal-header ">
-                    <h5 class="modal-title ">Add Alias</h5>
-                    <button type="button " class="close " data-dismiss="modal " aria-label="Close " id="close2">
-                        <span aria-hidden="true ">&times;</span>
-                    </button>
-                </div>
-                <form id="form">
-                    <div class="modal-body ">
-                        <input type="text" placeholder="Enter Alias Name..." class="alias-input" id="name-input"></input>
-                    </div>
-                    <div class="modal-footer ">
-                        <input type="submit" class="btn btn-primary save-btn" value="Add Alias"></input>
-                    </div>
-                </form>
+    <div class="modal" tabindex="-1 " role="dialog " id="exampleModal">
+      <div class="modal-dialog-centered" role="document ">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add Alias</h5>
+            <button
+              type="button "
+              class="close"
+              data-dismiss="modal "
+              aria-label="Close "
+              id="close2"
+            >
+              <span aria-hidden="true ">&times;</span>
+            </button>
+          </div>
+          <form id="form">
+            <div class="modal-body">
+              <input
+                type="text"
+                placeholder="Enter Alias Name..."
+                class="alias-input"
+                id="name-input"
+              />
             </div>
+            <div class="modal-footer">
+              <input
+                type="submit"
+                class="btn btn-primary save-btn"
+                value="Add Alias"
+              />
+            </div>
+          </form>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 
-<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js "></script>
-<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js "></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js "></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js "></script>
 
-<script src="static/js/dashboard.js "></script>
-
-</html>c
+  <script src="static/js/dashboard.js "></script>
+</html>

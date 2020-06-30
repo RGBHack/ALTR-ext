@@ -1,15 +1,12 @@
 {
-    "name": "ALTR",
-    "version": "1.0",
-    "description": "An easy-to-use extension for taking control of your email spam with aliases",
-    "permissions": [
-        "tabs",
-        "http://altr.cf/"
-    ],
-    "browser_action": {
-        "default_popup": "login.html",
-        "default_icon": "icon.png"
-    },
-    "content_security_policy": "script-src 'self' https://code.jquery.com https://www.gstatic.com https://stackpath.bootstrapcdn.com/ https://cdn.jsdelivr.net/; object-src 'self'",
-    "manifest_version": 2
+  "name": "ALTR",
+  "version": "1.1",
+  "description": "An easy-to-use extension for taking control of your email spam with aliases",
+  "permissions": ["activeTab", "http://altr.cf/"],
+  "browser_action": {
+    "default_popup": "login.html",
+    "default_icon": "icon.png"
+  },
+  "content_security_policy": "script-src 'self' https://code.jquery.com https://www.gstatic.com https://stackpath.bootstrapcdn.com/ https://cdn.jsdelivr.net/; object-src 'self'",
+  "manifest_version": 2
 }
