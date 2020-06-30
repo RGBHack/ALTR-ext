@@ -28,8 +28,8 @@
 ## 🔮 Usage
 
 - Clone this Repository
-- Go to chrome://extensions (chrome) or edge://extensions (edge)
-- On the top right corner (chrome) or bottom left corner (edge), enable developer options
+- Go to chrome://extensions (Chrome) or edge://extensions (Edge)
+- On the top right corner (Chrome) or bottom left corner (Edge), enable developer options
 - Click on the "Load Unpacked" Option and select the ALTR folder inside the ALTR-ext folder
 - You should now see the ALTR extension
 
