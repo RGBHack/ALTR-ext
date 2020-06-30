@@ -43,7 +43,7 @@ First, clone the repository. To run this extension locally, open up a chromium b
 
 ## 👨‍💻 Authors
 
-idk
+**Aadit Gupta, Rohan Juneja, Raadwan Masum, Safin Singh**
 
 ## 🤝 Contributing
 
