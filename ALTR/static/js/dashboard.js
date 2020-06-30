@@ -101,7 +101,7 @@ createEmail = (name) => {
             if (res === 0) {
                 var email = result.email
                 console.log(email)
-                renderElement(email)
+                renderElement(email,"on")
             } else if (res === 5000) {
                 console.log("Alias Limit Reached For User (5)");
             } else {
