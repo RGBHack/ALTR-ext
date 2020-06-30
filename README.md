@@ -26,7 +26,7 @@
 
 ## 🎥 Video
 
-(https://youtu.be/hF3Hy5KhoyQ)[https://youtu.be/hF3Hy5KhoyQ]
+[https://youtu.be/hF3Hy5KhoyQ](https://youtu.be/hF3Hy5KhoyQ)
 
 ## 🔮 Usage
 
