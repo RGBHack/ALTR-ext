@@ -39,7 +39,7 @@
 
 ## 🤝 Contributing
 
-Contributions, PRs, issues and feature requests are welcome! Feel free to check out our [issues page](https://github.com/idk/issues).
+Contributions, PRs, issues and feature requests are welcome! Feel free to check out our [issues page](https://github.com/RGBHack/ALTR-Ext/issues).
 
 ## ❤️ Show your support
 
