@@ -28,10 +28,13 @@
 ## 💻 Try it out
 
 ```sh
-git clone {GIT REPO}
-{INSTALL DEPENDENCIES}
-{RUN PROJECT}
+git clone github.com/RGBHack/ALTR-ext.git
 ```
+
+- Go to chrome://extensions (chrome) or edge://extensions (edge)
+- On the top right corner (chrome) or bottom left corner (edge), enable developer options
+- Click on the "Load Unpacked" Option and select the ALTR folder inside the ALTR-ext folder
+- You should now see the ALTR extension
 
 ## 🔮 Usage
 
