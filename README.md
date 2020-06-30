@@ -4,7 +4,7 @@
 
 <h3 align="center">
   <i>
-    A simple and easy-to-manage way to take control of your email spam
+    A simple and secure way to take control of your email spam
   </i>
 </h3>
 
