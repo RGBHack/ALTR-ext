@@ -21,7 +21,7 @@
 
 ## ✨ In Action
 
-<img src="./assets/altr_screenshot.png" />
+<img src="./assets/screenshot.png" />
 
 
 ## 🎥 Video
