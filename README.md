@@ -25,24 +25,13 @@
   <!-- Screenshots, screencasts -->
 </p>
 
-## 💻 Try it out
+## 🔮 Usage
 
-```sh
-git clone github.com/RGBHack/ALTR-ext.git
-```
-
+- Clone this Repository
 - Go to chrome://extensions (chrome) or edge://extensions (edge)
 - On the top right corner (chrome) or bottom left corner (edge), enable developer options
 - Click on the "Load Unpacked" Option and select the ALTR folder inside the ALTR-ext folder
 - You should now see the ALTR extension
-
-## 🔮 Usage
-
-Link docs, basic usage info
-
-## 🚀 Local Development
-
-First, clone the repository. To run this extension locally, open up a chromium browser and enable developer mode for extensions. Then, load the unpacked extension that is this folder.
 
 ## 👨‍💻 Authors
 
